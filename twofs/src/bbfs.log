@@ -1,0 +1,504 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 31
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 36f0bf60
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 36f0a2a0
+    logfile = 36f0bad0
+    rootdir = /home/fy63/566/twofs1/src/filesystem_image
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0x6da57c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 040666
+    st_nlink = 2
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+
+bb_opendir(path="/", fi=0x6da57c30)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+
+bb_readdir(path="/", buf=0x60000dd0, filler=0x6e4c3bc0, offset=0, fi=0x6e27ac30)
+
+bb_getattr(path="/file1", statbuf=0x6da57c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file1", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file1"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 0100666
+    st_nlink = 1
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 1024
+    st_blksize = 0
+    st_blocks = 8
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/file2", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 0100666
+    st_nlink = 1
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 1024
+    st_blksize = 0
+    st_blocks = 8
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_releasedir(path="/", fi=0x6e27ac40)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0x6da57c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 040666
+    st_nlink = 2
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/file2", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 0100666
+    st_nlink = 1
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 1024
+    st_blksize = 0
+    st_blocks = 8
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_open(path"/file2", fi=0x6da57cf0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+here comes the strcmp    fi:
+    flags = 0x00008002
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/file2", fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x7fe35a2a0bcdbb61
+
+bb_ftruncate(path="/file2", offset=1023, fi=0x6e27ac50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/file2", statbuf=0x6e27ab70, fi=0x6e27ac50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 64769
+    st_ino = 37770947
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 1023
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65c309e1
+    st_mtime = 0x65c309e7
+    st_ctime = 0x65c309e7
+
+bb_open(path"/file2", fi=0x6da57cf0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+here comes the strcmp    fi:
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_write(path="/file2", buf=0x6da59060, size=1, offset=1023, fi=0x6da57d50)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_write(path="/file2", buf=0x6e27c060, size=1, offset=1024, fi=0x6e27ad50)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/file2", statbuf=0x6da57c10, fi=0x6da57cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 64769
+    st_ino = 37770947
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65c309e1
+    st_mtime = 0x65c309e7
+    st_ctime = 0x65c309e7
+
+bb_read(path="/file2", buf=0x68002740, size=4096, offset=0, fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 1024
+
+bb_flush(path="/file2", fi=0x6da57cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x7fe35a2a0bcdbb61
+
+bb_release(path="/file2", fi=0x6e27acf0)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_release(path="/file2", fi=0x6da57cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/copied,", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/copied,", fpath = "/home/fy63/566/twofs1/src/filesystem_image/copied,"
+
+bb_getattr(path="/copied,", statbuf=0x6da57c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/copied,", fpath = "/home/fy63/566/twofs1/src/filesystem_image/copied,"
+
+bb_getattr(path="/s,", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/s,", fpath = "/home/fy63/566/twofs1/src/filesystem_image/s,"
+
+bb_getattr(path="/s,", statbuf=0x6da57c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/s,", fpath = "/home/fy63/566/twofs1/src/filesystem_image/s,"
+
+bb_getattr(path="/kB", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/kB", fpath = "/home/fy63/566/twofs1/src/filesystem_image/kB"
+
+bb_getattr(path="/kB", statbuf=0x6da57c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/kB", fpath = "/home/fy63/566/twofs1/src/filesystem_image/kB"
+
+bb_getattr(path="/Input", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/Input", fpath = "/home/fy63/566/twofs1/src/filesystem_image/Input"
+
+bb_getattr(path="/Input", statbuf=0x6da57c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/Input", fpath = "/home/fy63/566/twofs1/src/filesystem_image/Input"
+
+bb_getattr(path="/", statbuf=0x6e27ac10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 040666
+    st_nlink = 2
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0x6da57c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/", fpath = "/home/fy63/566/twofs1/src/filesystem_image/"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 040666
+    st_nlink = 2
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/file2", statbuf=0x6e27ac40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 0100666
+    st_nlink = 1
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 1024
+    st_blksize = 0
+    st_blocks = 8
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_open(path"/file2", fi=0x6da57cf0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+here comes the strcmp    fi:
+    flags = 0x00008002
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_flush(path="/file2", fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x477710348442078e
+
+bb_ftruncate(path="/file2", offset=1023, fi=0x6da57c50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/file2", statbuf=0x6da57b70, fi=0x6da57c50)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 64769
+    st_ino = 37770947
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 1023
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65c309e7
+    st_mtime = 0x65c30b09
+    st_ctime = 0x65c30b09
+
+bb_open(path"/file2", fi=0x6e27acf0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs1/src/filesystem_image", path = "/file2", fpath = "/home/fy63/566/twofs1/src/filesystem_image/file2"
+here comes the strcmp    fi:
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_write(path="/file2", buf=0x6e27c060, size=1, offset=1023, fi=0x6e27ad50)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_write(path="/file2", buf=0x6da59060, size=1, offset=1024, fi=0x6da57d50)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_fgetattr(path="/file2", statbuf=0x6e27ac10, fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    si:
+    st_dev = 64769
+    st_ino = 37770947
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 2048
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65c309e7
+    st_mtime = 0x65c30b09
+    st_ctime = 0x65c30b09
+
+bb_read(path="/file2", buf=0x60001240, size=4096, offset=0, fi=0x6da57cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pread returned 1024
+
+bb_flush(path="/file2", fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x477710348442078e
+
+bb_release(path="/file2", fi=0x6da57cf0)
+    fi:
+    flags = 0x00008002
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_release(path="/file2", fi=0x6e27acf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_destroy(userdata=0x36f0a2a0)
+    close returned 0

@@ -1,0 +1,341 @@
+
+bb_init()
+    conn:
+    proto_major = 7
+    proto_minor = 31
+    async_read = 1
+    max_write = 131072
+    max_readahead = 131072
+    capable = 00000ffb
+    want = 00000010
+    max_background = 0
+    congestion_threshold = 0
+    context:
+    fuse = 37a0c760
+    uid = 0
+    gid = 0
+    pid = 0
+    private_data = 37a0b2a0
+    logfile = 37a0c2d0
+    rootdir = /home/fy63/566/twofs/example/rootdir
+    umask = 00000
+
+bb_getattr(path="/", statbuf=0xe7216c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7a39c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+
+bb_getattr(path="/bogus.txt", statbuf=0xe7a39c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/bogus.txt", fpath = "/home/fy63/566/twofs/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133482
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 11
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_open(path"/bogus.txt", fi=0xe7216cf0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/bogus.txt", fpath = "/home/fy63/566/twofs/example/rootdir/bogus.txt"
+    open returned 5
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+
+bb_truncate(path="/bogus.txt", newsize=0)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/bogus.txt", fpath = "/home/fy63/566/twofs/example/rootdir/bogus.txt"
+    truncate returned 0
+
+bb_getattr(path="/bogus.txt", statbuf=0xe7216b70)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/bogus.txt", fpath = "/home/fy63/566/twofs/example/rootdir/bogus.txt"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133482
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c2526a
+    st_ctime = 0x65c2526a
+
+bb_flush(path="/bogus.txt", fi=0xe7a39cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x45f18c7f8f98457e
+
+bb_write(path="/bogus.txt", buf=0xe7218060, size=3, offset=0, fi=0xe7216d50)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    pwrite returned 3
+
+bb_flush(path="/bogus.txt", fi=0xe7a39cf0)
+    fi:
+    flags = 0x00000000
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x45f18c7f8f98457e
+
+bb_release(path="/bogus.txt", fi=0xe7216cf0)
+    fi:
+    flags = 0x00008001
+    fh_old = 0x00000005
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000005
+    lock_owner = 0x0000000000000000
+    close returned 0
+
+bb_getattr(path="/", statbuf=0xe7a39c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7216c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7a39c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7216c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7a39c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7216c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_access(path="/", mask=01)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+
+bb_getattr(path="/mountpoint", statbuf=0xe7216c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/mountpoint", fpath = "/home/fy63/566/twofs/example/rootdir/mountpoint"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/mountpoint", statbuf=0xe7a39c40)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/mountpoint", fpath = "/home/fy63/566/twofs/example/rootdir/mountpoint"
+    lstat returned -1
+    ERROR lstat: No such file or directory
+    si:
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xe7216c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_getattr(path="/", statbuf=0xe7a39c10)
+    bb_fullpath:  rootdir = "/home/fy63/566/twofs/example/rootdir", path = "/", fpath = "/home/fy63/566/twofs/example/rootdir/"
+    lstat returned 0
+    si:
+    st_dev = 64769
+    st_ino = 38133481
+    st_mode = 040775
+    st_nlink = 2
+    st_uid = 1500013
+    st_gid = 1002
+    st_rdev = 0
+    st_size = 23
+    st_blksize = 4096
+    st_blocks = 0
+    st_atime = 0x65c25226
+    st_mtime = 0x65c25226
+    st_ctime = 0x65c25226
+
+bb_destroy(userdata=0x37a0b2a0)
